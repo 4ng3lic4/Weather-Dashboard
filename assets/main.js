@@ -65,16 +65,16 @@ fetch(url).then(response => response.json())
 .then( data => {
     console.log(data);
     //Create a div container and change the innetHTML to the data and icon, temperature, etc.
+var forecastDiv = document.querySelector("#topBar")
+var currentTemp = document.createElement("p");
+currentTemp.textContent="The current temperature is  "+data.list[0].main.temp 
+forecastDiv.appendChild(currentTemp);
 
     //Append this to another HTML container
  })
-
 }
 
-
 //Create element
-
-
 //Line at the bottom
 
 
