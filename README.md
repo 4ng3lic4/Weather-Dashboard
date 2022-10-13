@@ -37,14 +37,14 @@ The following animation demonstrates the application functionality:
 
 Here is the link of the finished work: 
 
-[Deployed website](https://4ng3lic4.github.io/Scheduler/)
+[Deployed website](https://4ng3lic4.github.io/Weather-Dashboard/)
 
 
 ## Credits
 
 Angelica Ibarra Ochoa
 
-[Developer Mozilla parseInt() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) |
+[Open Weather ](https://home.openweathermap.org/api_keys) |
 [W3 jQuery attr() Method tutorial](https://www.w3schools.com/jquery/html_attr.asp) |
 [jQuery documentation .each()](https://api.jquery.com/each/) |
 [Moment.js Documentation ](https://momentjs.com/docs/#/get-set/day/)) |
