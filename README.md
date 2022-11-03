@@ -45,10 +45,10 @@ Here is the link of the finished work:
 Angelica Ibarra Ochoa
 
 [Open Weather ](https://home.openweathermap.org/api_keys) |
-[W3 jQuery attr() Method tutorial](https://www.w3schools.com/jquery/html_attr.asp) |
-[jQuery documentation .each()](https://api.jquery.com/each/) |
-[Moment.js Documentation ](https://momentjs.com/docs/#/get-set/day/)) |
-[Bootstrap Documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/) |
+[JavaScript Events](https://www.w3schools.com/js/js_events.asp) |
+[Window localStorage](https://www.w3schools.com/jsrEF/prop_win_localstorage.asp) |
+[CSS-TRICS Documentation ](https://css-tricks.com/almanac/properties/f/flex/) |
+[]() |
 
 
 ## License
