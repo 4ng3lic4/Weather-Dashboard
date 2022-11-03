@@ -52,7 +52,7 @@ var searchHistoryCardEl = document.getElementById("search-history-card")
 var historyBtnsEl = document.getElementById("history-buttons-container");
 var historyBtnsArray [];
 var dynamicWeatherCardEl = document.getElementById("DynamicWeatherCard");
-var fiveDayForCardEl = document.getElementById("five-day-forecast-card");
+
 var fiveDaycontainerEl = document.getElementById("FiveDaycontainer");
 
 
@@ -62,6 +62,7 @@ var fiveDaycontainerEl = document.getElementById("FiveDaycontainer");
 
 
 */
+var fiveDayForCardEl = document.getElementById("five-day-forecast-card");
 var searchBtn = document.getElementById("searchBtn");
 
 //1
@@ -89,8 +90,7 @@ fetch(url).then(response => response.json())
     let humidity = data.main.humidity;
     let wind = data.wind.speed;
 
-
-
+    //fiveDayForCardEl.innerHTML="";
     var temp_para = document.createElement("p");
     temp_para.textContent="The current temperature is  "+temperature;
     var humidity_para =document.createElement("p");
@@ -99,17 +99,12 @@ fetch(url).then(response => response.json())
     wind_para.textContent="The current wind is  "+wind;
     var city_para =document.createElement("p");
     city_para.textContent="The city name is  "+cityname;
-
+    //Before appending the new city, we empty the search
+    city_header.innerHTML="";
+    //We empty the details before appending the new search
+    weather_details.innerHTML="";
     city_header.append(city_para);
     weather_details.append(temp_para,wind_para,humidity_para)
-
-
-
-
-
-
-    
-
     //This has to match the data we want to fetch
  
     getForecast(cityname);
@@ -130,6 +125,7 @@ fetch(url).then(response => response.json())
    ///Create a div container and change the innetHTML to the data and icon, temperature, etc.
    let datalist = data.list 
    let forecastdiv = document.getElementById("five-day-card-container")
+   forecastdiv.innerHTML=""
    for (let i = 0; i < datalist.length; i+=8){
     let parentdiv = document.createElement("div")
     parentdiv.style.border="1px solid black"
