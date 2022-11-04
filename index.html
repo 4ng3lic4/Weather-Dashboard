@@ -15,66 +15,94 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <main class="border">
-    <!--Top Bar-->
-    <div id="topBar" class="border">
-      <h1>Weather Dashboard</h1>
-    </div>
-    <!--End Top Bar-->
-    <!--Search Box-->
-    <div id="SearchCity" class="border">
-      <form id="formBlock"> Search For a City </form>
+<!--Min height 100vh means the element should occupy the web browser viewport height.-->
 
-      <button id="searchBtn">Search</button>
-    </div>
+<body class="flex-column min-100-vh">
+  <!--Top Bar outside divs-->
+  <header class="top-bar">
+    <h1>Weather Dashboard</h1>
+  </header>
 
-    <!--Search History -->
-    <div id="searchHistory" class="border">
-      <p>History</p>
-    </div>
+  <!--Whole Container-->
 
-    <!--Current City-->
-    <div id="CurrentCity" class="border"> Philadelphia and show Date</div>
- <!--We create the container through JS when we have the data and attach it to this container will be done dinamically-->
+  <main class="flex-row justify-space-between">
 
-    <!--5 day Forecast will be generated in JavaScript-->
-    <div id="Forecast" .container class="border">
-      <h2>5 Day Forecast</h2>
+
+    <!--Mid Row Container-->
+    <div id="mid-row" class="flex-row justify-space-between main-col-flex">
+
+      <!--Mid row - Left column-->
+      <div id="left-column" class="main-col-flex mid-col">
+
+        <!-- Card for SEARCH FORM-->
+        <div id="search" class="card">
+          <h2 class="card-header"> Search for a City </h2>
+          <form id="citySearch" class="card-container">
+                <!--#citySearch-->
+            <label class="form-label" for="city">City Name</label>
+            <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+            <button id= "searchBtn" class="btn">Search</button>
+          </form>
+        </div> <!--End of card for Sarch City Weather-->
+      </div><!--End of Middle Row - Left column-->
+
+
     
 
+                              <!-- Mid Row Right Column-->
+                        
+      <div id="right-column" class="main-col-flex media-col" >
 
-    </div>
+      <!-- Dynamic Weather Card-->
+        <div id="DynamicWeatherCard" class="card-hidden">
+
+          <!-- Header with City,Current Date and Icon -->
+          <h4 id="CityDateIcon" class="card-header"> </h4>
+
+          <!-- Weather Details Container, p tags will be created dynamically for temp, humidity, and wind speed-->
+          <div id="WeatherDetails" class="card-body"></div>
+
+        </div><!-- End of DynamicWeatherCard-->
+      </div><!--End of right Column for Current City Weather-->
+    </div><!--End of mid-row-->
+
+<!--6pm-->
+                                        <!-- Bottom-Row Container-->
+    <div id="bottom-row" class="flex-row justify-space-between main-col-flex">
 
 
+      <!-- Bottom Left Columm-->
+      <div id="bottomLeftCol" class="main-col-flex md-col">
+
+
+     <!--Search history card -->
+
+<div id="search-history-card" class="card" style="display:none;">
+<h3 class="card-header"> Search History
+</h3>
+
+<!--History Buttons Container. This will have the search buttons generated dynamically -->
+<div id="history-buttons-container" class="card-container">
+
+</div> <!--End of history buttons-->
+</div><!--End of history-search card-->
+  </div> <!-- End of Bottom Left Columm-->
+
+
+  <!-- Bottom Right Column-->
+<div id="bottom-right-column" class="main-col-flex media-col ">
+  <!--5 day forecast card-->
+  <div id="five-day-forecast-card" class="card-hidden" >
+<h2 class="card-header">5 Day Forecast</h2> 
+
+<!--Five day card container for the tiles that will be generated dinamically-->
+<div id="five-day-card-container" class="card-container flex-row justify-space-around">
+
+</div><!-- End of Five day card container for the tiles that will be generated dinamically-->
+  </div> <!--End of 5 day forecast card-->
+</div><!--End of Bottom Right Column-->
+    </div><!-- End of Bottom Row-->
   </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script src="./assets/main.js"></script>
 </body>
 

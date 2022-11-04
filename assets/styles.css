@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -8,27 +8,81 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-main {
-    width:90%;
-    margin:auto;
-    padding:10px;
-}
+header {
 
-#SearchCity {
-
+    padding: 15px 200px;
+    background-image: linear-gradient(to right, rgb(73, 109, 251), rgb(13, 4, 64));
 
 }
 
-.container {
-    display:flex
-    width:90%;
-    margin:auto;
-    padding:10px;
+h1 {
+    color: white;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.flex-column {
+    /*Applied to the Body*/
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
-.border {
+.min-100-vh {
+    min-height: 100vh;
+}
 
-    border-style:groove;
-    padding: 5px;
+.flex-row {
+    /*Applied to main */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    
+    justify-content: space-between;
+}
+
+.main-col-flex {
+    flex: 0 0 100%;
+}
+
+
+
+/*Cards*/
+
+.card {
+    margin: 0 0 20px;
+}
+
+.card-header {
+    padding: 2.3%;
+}
+
+.card-container {
+    padding:2.3%;
+}
+
+.box-current{
+border-style: groove;
+
+}
+/*MEDIA*/
+
+/*Add Responsiveness to the website for phones*/
+@media screen and (max-width:390px) {}
+
+/*/*Add Responsiveness to the website for tablets*/
+*/ @media screen and (min-width: 768px) {
+    .media-col {
+        flex: 0 0 calc(100% 8/12 -2%);
+    }
+
+    .mid-col {
+        flex: 0 0 calc(100% * 4/12 -2%);
+
+    }
+   
 }
